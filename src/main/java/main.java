@@ -21,11 +21,12 @@ public class main {
                 int userNum = userCard.cardNum();
                 int computerNum = computerCard.cardNum();
                 String userCardname = userCard.getCardName();
+                String computerCardname = computerCard.getCardName();
 
                 // 게임 진행
                 System.out.println("당신의 카드는 " + userCardname + "입니다.");
 
-                System.out.print(" =========================\n"
+                System.out.print("\n=========================\n"
                     + "당신의 카드는 " + userCardname + "입니다." +
                     """
                     
@@ -38,14 +39,20 @@ public class main {
 
                 if (menuGame == 1) {
                     if (computerNum == userNum) {
-                        System.out.println("비겼습니다.");
+                        System.out.println("\n컴퓨터와 비겼습니다." +
+                                "\n당신의 카드는 " + userCardname +
+                                "\n컴퓨터의 카드는 " + computerCardname + "\n");
                     } else if (computerNum > userNum) {
-                        System.out.println("졌습니다.\n 당신의 카드는 " + userCard.getCardName());
+                        System.out.println("\n컴퓨터한테 졌습니다." +
+                                "\n당신의 카드는 " + userCardname +
+                                "\n컴퓨터의 카드는 " + computerCardname + "\n");
                     }  else {
-                        System.out.println("이겼습니다.");
+                        System.out.println("\n컴퓨터한테 이겼습니다." +
+                                "\n당신의 카드는 " + userCardname +
+                                "\n컴퓨터의 카드는 " + computerCardname + "\n");
                     }
                 } else {
-                    System.out.println("당신은 게임을 포기했습니다.");
+                    System.out.println("\n당신은 게임을 포기했습니다.");
                 }
             }
             // 게임 종료
